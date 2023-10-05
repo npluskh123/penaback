@@ -58,7 +58,7 @@ app.get('/posts/get', PostController.getLastTags);
 app.get('/posts/:id', PostController.getOne);
 app.delete('/posts/:id', checkAuth, PostController.remove);
 
-app.listen(PORT || 4444, (err) => {
+app.listen(8080 || 4444, (err) => {
   if (err) {
     return console.log(err);
   }
