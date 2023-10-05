@@ -8,7 +8,7 @@ import { registerValidation, loginValidation, postCreateValidation } from './val
 import { handleValidationErrors, checkAuth } from './utils/index.js';
 
 import { UserController, PostController } from './controllers/index.js';
-
+//"^7.5.0",
 mongoose
   .connect(
     //'mongodb+srv://niknikeh54:CO0QHriqhZISQdJx@cluster0.tifzxlg.mongodb.net/blog?retryWrites=true&w=majority',
