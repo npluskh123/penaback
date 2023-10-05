@@ -58,7 +58,7 @@ app.get('/posts/get', PostController.getLastTags);
 app.get('/posts/:id', PostController.getOne);
 app.delete('/posts/:id', checkAuth, PostController.remove);
 
-app.listen(process.env.PORT, (err) => {
+app.listen(8080, (err) => {
   if (err) {
     return console.log(err);
   }
