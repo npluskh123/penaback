@@ -12,7 +12,7 @@ import { UserController, PostController } from './controllers/index.js';
 mongoose
   .connect(
     //'mongodb+srv://niknikeh54:CO0QHriqhZISQdJx@cluster0.tifzxlg.mongodb.net/blog?retryWrites=true&w=majority',
-    process.env.MONGODB_URI,
+    process.env.MONGODB_CONNECT_URI,
   )
   .then(() => console.log('DB ok'))
   .catch((err) => console.log('DB error', err));
@@ -58,10 +58,11 @@ app.get('/posts/get', PostController.getLastTags);
 app.get('/posts/:id', PostController.getOne);
 app.delete('/posts/:id', checkAuth, PostController.remove);
 
-app.listen(process.env.PORT || 4444, (err) => {
+const PORT = process.env.PORT;
+app.listen(PORT, (err) => {
   if (err) {
     return console.log(err);
   }
 
-  console.log('Server OOK');
+  console.log('Server OOK' + PORT);
 });
